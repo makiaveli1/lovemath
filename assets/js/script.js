@@ -1,24 +1,33 @@
-function runGame() {
+//Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listeners to them
 
-}
+document.addEventListener("DOMContentLoaded", function () {
+  let buttons = document.getElementsByTagName("button");
 
-function checkAnswer() {
-}
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      if (this.getAttribute("data-type") === "submit") {
+        alert("You clicked submit!");
+      } else {
+        let gameType = this.getAttribute("data-type");
+        alert(`You clicked ${gameType}`);
+      }
+    });
+  }
+});
 
-function calculateCorrectAnswer() {
-}
+function runGame() {}
 
-function incrementScore() {
-}
+function checkAnswer() {}
 
-function incrementWrongAnswer() {
-}
+function calculateCorrectAnswer() {}
 
-function displayAdditionQuestion() {
-}
+function incrementScore() {}
 
-function displaySubtractionQuestion() {
-}
+function incrementWrongAnswer() {}
 
-function displayMultiplyQuestion() {
-}
+function displayAdditionQuestion() {}
+
+function displaySubtractionQuestion() {}
+
+function displayMultiplyQuestion() {}
